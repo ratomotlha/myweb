@@ -511,10 +511,10 @@
   requestAnimationFrame(() => syncSegPill(menuSeg));
   }
 
-  /* ---------- Booking page (direct send to info@rustygrandcafe.co.za) ---------- */
+  /* ---------- Booking page (direct send to Bookings@rustygrandcafe.co.za) ---------- */
   const form = $("[data-book]");
   if (form) {
-    const BOOK_TO = "info@rustygrandcafe.co.za";
+    const BOOK_TO = "Bookings@rustygrandcafe.co.za";
     const F = form.elements, msg = $("[data-msg]"), note = $("[data-night-note]"), submitBtn = $('button[type="submit"]', form);
     const nightFor = iso => {
       const d = new Date(iso + "T12:00:00");
@@ -589,7 +589,7 @@
         const data = await r.json().catch(() => ({}));
         if (r.ok && String(data.success) !== "false") {
           msg.className = "form-msg ok";
-          msg.textContent = "Reservation sent to info@rustygrandcafe.co.za! We’ll confirm your table shortly.";
+          msg.textContent = `Reservation sent to ${BOOK_TO}! We’ll confirm your table shortly.`;
           ["name", "phone", "email", "notes"].forEach(k => { F[k].value = ""; });
           submitBtn.textContent = "Reserved ✓";
           setTimeout(() => { submitBtn.disabled = false; submitBtn.textContent = "Reserve now"; }, 3500);
@@ -597,7 +597,7 @@
         }
         if (/activat/i.test(String(data.message || ""))) {
           msg.className = "form-msg ok";
-          msg.textContent = "One-time setup sent: check info@rustygrandcafe.co.za and click 'Activate Form' to start receiving website bookings.";
+          msg.textContent = `One-time setup sent: check ${BOOK_TO} and click 'Activate Form' to start receiving website bookings.`;
           submitBtn.disabled = false;
           submitBtn.textContent = "Reserve now";
           return;
