@@ -239,15 +239,16 @@
 
   renderEventsUI();
 
-  fetch(SHEET_CSV_URL, { cache: "no-store" })
+  fetch(`${SHEET_CSV_URL}&_ts=${Date.now()}`, { cache: "no-store" })
     .then(r => r.ok ? r.text() : Promise.reject(r.status))
     .then(txt => {
+      if (/^\s*</.test(txt)) throw new Error("non-csv");
       const parsed = rowsToEvents(parseCSV(txt));
       specialEvents = parsed;
       try { sessionStorage.setItem(SHEET_CACHE_KEY, JSON.stringify(parsed)); } catch {}
       renderEventsUI();
     })
-    .catch(() => { /* offline or blocked: built-in schedule stays active */ });
+    .catch(() => { /* offline or restricted: built-in/cached schedule stays active */ });
 
   /* ---------- Menu page ---------- */
   const list = $("[data-menu-list]");
