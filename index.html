@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Rusty Grand Café | The Grand Lifestyle, Value Mart Rustenburg</title>
+  <meta name="description" content="Rusty Grand Café is Rustenburg’s vibrant café and bar at Value Mart, where great food, good music and good company come together." />
+  <meta name="theme-color" content="#14284d" />
+  <meta property="og:title" content="Rusty Grand Café | The Grand Lifestyle, Value Mart Rustenburg" />
+  <meta property="og:description" content="Rusty Grand Café is Rustenburg’s vibrant café and bar at Value Mart, where great food, good music and good company come together." />
+  <meta property="og:image" content="assets/img/hero-new.jpg" />
+  <link rel="icon" href="assets/img/logo-N10H.png" />
+  <link rel="preload" href="assets/fonts/forum.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+  <div class="bg" aria-hidden="true"></div>
+
+  <header class="topbar glass">
+    <button class="burger" aria-label="Open menu" aria-expanded="false" data-burger><span></span><span></span></button>
+    <a href="index.html" class="topbar-logo" aria-label="Rusty Grand Café home"><img src="assets/img/logo-N10H.png" alt="" /></a>
+    <a href="book.html" class="btn btn-outline">Book a table</a>
+  </header>
+  <nav class="sheet" data-sheet aria-label="Mobile">
+    <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About</a><a href="whats-on.html">What’s on</a><a href="contact.html">Contact</a><a href="book.html">Book a table</a>
+  </nav>
+
+  <main class="stage home">
+
+    <article class="tile tile-photo t-hero" data-slides>
+      <img src="assets/img/hero-new.jpg" alt="The renovated dining room with navy velvet seating and rattan lamps" class="on" fetchpriority="high" />
+      <img src="assets/img/hero-bar.jpg" alt="The new bar with rattan lamps and blue-lit shelves" loading="lazy" />
+      <img src="assets/img/lounge-navy.jpg" alt="Navy velvet lounge sofas by the windows" loading="lazy" />
+      <img src="assets/img/armchairs.jpg" alt="Tropical-print armchairs" loading="lazy" />
+      <div class="hero-top"><span class="pill-label glass" data-status><i class="dot"></i><span class="status-text">Open today</span></span><span class="pill-label pill-new">Newly renovated</span></div>
+      <a href="whats-on.html" class="tonight-chip glass" data-tonight-chip><span class="pill-label pill-hot">Tonight</span><span data-tonight-name>Ladies Night</span><i class="arrow">↗</i></a>
+      <div class="dots" data-dots></div>
+    </article>
+
+    <a href="menu.html" class="tile tile-photo t-menu">
+      <img src="assets/img/cocktails-2.jpg" alt="Pink cocktails on a tray" />
+      <div class="tile-cap">
+        <h2 class="display">Menu</h2>
+        <span class="btn btn-glass btn-sm">Explore <i class="arrow">↗</i></span>
+      </div>
+    </a>
+
+    <div class="t-sub">
+      <article class="tile tile-glass center t-about">
+        <span class="pill-outline">About RGC</span>
+        <h2 class="caps">The Grand Lifestyle</h2>
+        <p>Rusty Grand Café is Rustenburg’s vibrant café and bar at Value Mart, where great food, good music and good company come together to create unforgettable moments.</p>
+      </article>
+      <a href="contact.html" class="tile tile-photo t-contact" data-slides>
+        <img src="assets/img/window-table.jpg" alt="Window table overlooking Rustenburg" class="on" />
+        <img src="assets/img/mirrors.jpg" alt="Gold mirrors and greenery in the renovated café" loading="lazy" />
+        <div class="tile-cap center">
+          <h2 class="display sm">Contact<br />Us</h2>
+          <span class="btn btn-glass btn-sm">Contact Us <i class="arrow">↗</i></span>
+        </div>
+        <div class="dots" data-dots></div>
+      </a>
+    </div>
+  </main>
+
+  <nav class="dock glass" aria-label="Main">
+    <a href="index.html" class="active" aria-current="page">Home</a><a href="menu.html">Menu</a><a href="index.html" class="dock-logo" aria-label="Rusty Grand Café home"><img src="assets/img/logo-N10H.png" alt="" /></a><a href="about.html">About</a><a href="book.html" class="dock-book">Book a table</a>
+  </nav>
+
+  <footer class="foot">
+    <span><span class="c">©</span> 2026 Rusty Grand Cafe (Pty) Ltd · All Rights Reserved</span>
+    <span class="foot-sep" aria-hidden="true">|</span>
+    <a href="terms.html" class="foot-link">Terms &amp; Conditions</a>
+    <span class="foot-sep" aria-hidden="true">|</span>
+    <a href="https://www.ratostudio.co.za/" target="_blank" rel="noopener" class="foot-rato">Crafted by <b>Rato Studio</b> <i class="arrow">↗</i></a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

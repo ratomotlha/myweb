@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>What’s on | Rusty Grand Café</title>
+  <meta name="description" content="Weekly entertainment at Rusty Grand Café: Acoustic Mondays, Midweek Blend, Ladies Night, Feel Good Fridays, Ballers Night and Best Sundays." />
+  <meta name="theme-color" content="#14284d" />
+  <meta property="og:title" content="What’s on | Rusty Grand Café" />
+  <meta property="og:description" content="Weekly entertainment at Rusty Grand Café: Acoustic Mondays, Midweek Blend, Ladies Night, Feel Good Fridays, Ballers Night and Best Sundays." />
+  <meta property="og:image" content="assets/img/hero-new.jpg" />
+  <link rel="icon" href="assets/img/logo-N10H.png" />
+  <link rel="preload" href="assets/fonts/forum.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="whats-on">
+  <div class="bg" aria-hidden="true"></div>
+
+  <header class="topbar glass">
+    <button class="burger" aria-label="Open menu" aria-expanded="false" data-burger><span></span><span></span></button>
+    <a href="index.html" class="topbar-logo" aria-label="Rusty Grand Café home"><img src="assets/img/logo-N10H.png" alt="" /></a>
+    <a href="book.html" class="btn btn-outline">Book a table</a>
+  </header>
+  <nav class="sheet" data-sheet aria-label="Mobile">
+    <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About</a><a href="whats-on.html">What’s on</a><a href="contact.html">Contact</a><a href="book.html">Book a table</a>
+  </nav>
+
+  <main class="stage whats-on">
+
+    <article class="tile tile-glass t-ev">
+      <span class="pill-outline">What’s on</span>
+      <h1 class="h-sans">Weekly Entertainment</h1>
+      <p data-ev-copy>Every night at RGC has its own sound. Find your night, bring your people.</p>
+      <div class="seg" role="tablist" data-ev-seg hidden>
+        <button role="tab" aria-selected="true" data-ev="anniv">8th Anniversary</button>
+        <button role="tab" aria-selected="false" data-ev="weekly">Every week</button>
+      </div>
+      <a href="book.html" class="btn btn-solid btn-sm ev-book">Book a table <i class="arrow">↗</i></a>
+    </article>
+    <div class="t-grid" data-events></div>
+  </main>
+
+  <nav class="dock glass" aria-label="Main">
+    <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="index.html" class="dock-logo" aria-label="Rusty Grand Café home"><img src="assets/img/logo-N10H.png" alt="" /></a><a href="about.html">About</a><a href="book.html" class="dock-book">Book a table</a>
+  </nav>
+
+  <footer class="foot">
+    <span><span class="c">©</span> 2026 Rusty Grand Cafe (Pty) Ltd · All Rights Reserved</span>
+    <span class="foot-sep" aria-hidden="true">|</span>
+    <a href="terms.html" class="foot-link">Terms &amp; Conditions</a>
+    <span class="foot-sep" aria-hidden="true">|</span>
+    <a href="https://www.ratostudio.co.za/" target="_blank" rel="noopener" class="foot-rato">Crafted by <b>Rato Studio</b> <i class="arrow">↗</i></a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

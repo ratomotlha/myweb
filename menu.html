@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Menu | Rusty Grand Café</title>
+  <meta name="description" content="The full Rusty Grand Café food and drinks menu with prices: breakfast, tapas, grills, sushi, pizza, cocktails, spirits and more." />
+  <meta name="theme-color" content="#14284d" />
+  <meta property="og:title" content="Menu | Rusty Grand Café" />
+  <meta property="og:description" content="The full Rusty Grand Café food and drinks menu with prices: breakfast, tapas, grills, sushi, pizza, cocktails, spirits and more." />
+  <meta property="og:image" content="assets/img/hero-new.jpg" />
+  <link rel="icon" href="assets/img/logo-N10H.png" />
+  <link rel="preload" href="assets/fonts/forum.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="menu">
+  <div class="bg" aria-hidden="true"></div>
+
+  <header class="topbar glass">
+    <button class="burger" aria-label="Open menu" aria-expanded="false" data-burger><span></span><span></span></button>
+    <a href="index.html" class="topbar-logo" aria-label="Rusty Grand Café home"><img src="assets/img/logo-N10H.png" alt="" /></a>
+    <a href="book.html" class="btn btn-outline">Book a table</a>
+  </header>
+  <nav class="sheet" data-sheet aria-label="Mobile">
+    <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About</a><a href="whats-on.html">What’s on</a><a href="contact.html">Contact</a><a href="book.html">Book a table</a>
+  </nav>
+
+  <main class="stage menu">
+
+    <article class="tile tile-photo t-menu-photo">
+      <img src="assets/img/cocktails-2.jpg" alt="Signature cocktails served at RGC" />
+      <div class="tile-mid"><h1 class="display xl">Menu</h1></div>
+    </article>
+
+    <a class="tile t-uber" href="https://www.ubereats.com/za/store/rusty-grand-cafe/2Yj6vU8wVpezVfLTQRm4HQ" target="_blank" rel="noopener">
+      <div class="uber-logo" aria-hidden="true"><span>Uber</span><span class="eats">Eats</span></div>
+      <div class="uber-cap"><h2 class="h-sans">Order RGC</h2><p>Get the menu delivered across Rustenburg.</p><span class="btn btn-solid btn-sm">On Uber Eats <i class="arrow">↗</i></span></div>
+    </a>
+
+    <article class="tile t-menu-panel">
+      <div class="deco" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M8 0l1.6 6.4L16 8l-6.4 1.6L8 16l-1.6-6.4L0 8l6.4-1.6z"/></svg><i></i><svg viewBox="0 0 16 16"><path d="M8 0l1.6 6.4L16 8l-6.4 1.6L8 16l-1.6-6.4L0 8l6.4-1.6z"/></svg></div>
+      <div class="menu-top">
+        <div class="seg" role="tablist" data-seg>
+          <button role="tab" aria-selected="true" data-kind="food">Food menu</button>
+          <button role="tab" aria-selected="false" data-kind="drinks">Bev menu</button>
+        </div>
+        <a class="dl" data-pdf href="https://framerusercontent.com/assets/FlkxUdgjqKcTCfYPoY45xXPY.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16"><path d="M8 2v8m0 0L5 7m3 3l3-3M3 13h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>PDF</span>
+        </a>
+      </div>
+      <div class="chips" data-chips></div>
+      <div class="menu-list" data-menu-list tabindex="0"></div>
+      <button class="more" type="button" aria-label="Scroll down" data-more><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </article>
+  </main>
+
+  <nav class="dock glass" aria-label="Main">
+    <a href="index.html">Home</a><a href="menu.html" class="active" aria-current="page">Menu</a><a href="index.html" class="dock-logo" aria-label="Rusty Grand Café home"><img src="assets/img/logo-N10H.png" alt="" /></a><a href="about.html">About</a><a href="book.html" class="dock-book">Book a table</a>
+  </nav>
+
+  <footer class="foot">
+    <span><span class="c">©</span> 2026 Rusty Grand Cafe (Pty) Ltd · All Rights Reserved</span>
+    <span class="foot-sep" aria-hidden="true">|</span>
+    <a href="terms.html" class="foot-link">Terms &amp; Conditions</a>
+    <span class="foot-sep" aria-hidden="true">|</span>
+    <a href="https://www.ratostudio.co.za/" target="_blank" rel="noopener" class="foot-rato">Crafted by <b>Rato Studio</b> <i class="arrow">↗</i></a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

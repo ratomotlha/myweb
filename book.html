@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Book a table | Rusty Grand Café</title>
+  <meta name="description" content="Reserve a table at Rusty Grand Café, Value Mart Rustenburg. Birthdays, date nights or a booth for the squad." />
+  <meta name="theme-color" content="#14284d" />
+  <meta property="og:title" content="Book a table | Rusty Grand Café" />
+  <meta property="og:description" content="Reserve a table at Rusty Grand Café, Value Mart Rustenburg. Birthdays, date nights or a booth for the squad." />
+  <meta property="og:image" content="assets/img/hero-new.jpg" />
+  <link rel="icon" href="assets/img/logo-N10H.png" />
+  <link rel="preload" href="assets/fonts/forum.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="book">
+  <div class="bg" aria-hidden="true"></div>
+
+  <header class="topbar glass">
+    <button class="burger" aria-label="Open menu" aria-expanded="false" data-burger><span></span><span></span></button>
+    <a href="index.html" class="topbar-logo" aria-label="Rusty Grand Café home"><img src="assets/img/logo-N10H.png" alt="" /></a>
+    <a href="book.html" class="btn btn-outline">Book a table</a>
+  </header>
+  <nav class="sheet" data-sheet aria-label="Mobile">
+    <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About</a><a href="whats-on.html">What’s on</a><a href="contact.html">Contact</a><a href="book.html">Book a table</a>
+  </nav>
+
+  <main class="stage book">
+
+    <article class="tile tile-photo t-b-photo">
+      <img src="assets/img/hero-bar.jpg" alt="The new bar at Rusty Grand Café" />
+      <div class="tile-cap">
+        <h1 class="display">Book a<br />table</h1>
+        <p class="cap-sub">Birthdays, date nights or a booth for the squad.</p>
+      </div>
+    </article>
+
+    <form class="tile tile-glass t-form" action="https://formsubmit.co/info@rustygrandcafe.co.za" method="POST" data-book novalidate>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" hidden />
+      <div class="form-head"><span class="pill-outline">Reservations</span><span class="night-note" data-night-note></span></div>
+      <label class="field"><span>Name</span><input name="name" type="text" autocomplete="name" placeholder="Your name" required /></label>
+      <div class="frow">
+        <label class="field"><span>Phone</span><input name="phone" type="tel" autocomplete="tel" placeholder="07x xxx xxxx" required /></label>
+        <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" placeholder="Optional" /></label>
+      </div>
+      <div class="frow f3">
+        <label class="field"><span>Guests</span>
+          <select name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>10+</option></select>
+        </label>
+        <label class="field"><span>Date</span><input name="date" type="date" required /></label>
+        <label class="field"><span>Time</span><input name="time" type="time" value="19:00" required /></label>
+      </div>
+      <label class="field"><span>Notes</span><input name="notes" type="text" placeholder="Occasion, booth, dietary needs (optional)" /></label>
+      <button class="btn btn-solid btn-block" type="submit">Reserve now</button>
+      <p class="form-msg" data-msg role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <nav class="dock glass" aria-label="Main">
+    <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="index.html" class="dock-logo" aria-label="Rusty Grand Café home"><img src="assets/img/logo-N10H.png" alt="" /></a><a href="about.html">About</a><a href="book.html" class="dock-book active" aria-current="page">Book a table</a>
+  </nav>
+
+  <footer class="foot">
+    <span><span class="c">©</span> 2026 Rusty Grand Cafe (Pty) Ltd · All Rights Reserved</span>
+    <span class="foot-sep" aria-hidden="true">|</span>
+    <a href="terms.html" class="foot-link">Terms &amp; Conditions</a>
+    <span class="foot-sep" aria-hidden="true">|</span>
+    <a href="https://www.ratostudio.co.za/" target="_blank" rel="noopener" class="foot-rato">Crafted by <b>Rato Studio</b> <i class="arrow">↗</i></a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
