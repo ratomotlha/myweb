@@ -237,7 +237,7 @@ a:hover .arrow, .btn:hover .arrow { transform: translate(3px,-3px); }
 .dl { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; padding: 8px 13px; border-radius: 50px; border: 1px solid var(--line); color: var(--soft); }
 .dl:hover { background: rgba(255,255,255,.12); color: #fff; }
 .dl svg { width: 16px; height: 16px; }
-.chips { display: flex; gap: 7px; overflow-x: auto; scrollbar-width: none; margin: 0 -22px; padding: 1px 22px;
+.chips { flex: none; display: flex; gap: 7px; overflow-x: auto; scrollbar-width: none; margin: 0 -22px; padding: 1px 22px;
   -webkit-mask: linear-gradient(90deg, transparent, #000 20px, #000 calc(100% - 20px), transparent); mask: linear-gradient(90deg, transparent, #000 20px, #000 calc(100% - 20px), transparent); }
 .chips::-webkit-scrollbar { display: none; }
 .chips button { flex: none; height: 34px; padding: 0 14px; border-radius: 50px; cursor: pointer; border: 1px solid var(--line); background: transparent; font-size: 13.5px; color: #fff; transition: background .25s, border-color .25s, transform .22s var(--ease); }
@@ -493,7 +493,7 @@ a:hover .arrow, .btn:hover .arrow { transform: translate(3px,-3px); }
   .t-404-card { min-height: 230px !important; }
   .t-terms-photo { min-height: 210px !important; }
   .t-terms-meta { min-height: 0 !important; padding: 24px 20px; }
-  .t-terms-panel { max-height: 74vh; min-height: 460px !important; }
+  .t-terms-panel { max-height: none; min-height: 0 !important; padding-bottom: 20px; }
   .foot-sep { display: none; }
   .foot { gap: 6px 16px; font-size: 13px; }
   .t-menu-photo { min-height: 240px !important; }

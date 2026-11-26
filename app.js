@@ -646,23 +646,40 @@
   if (termsList && termsChips && termsMore) {
     const secs = $$(".term-sec", termsList);
     const btns = $$("button[data-jump]", termsChips);
+    const isInnerScroll = () => getComputedStyle(termsList).overflowY !== "visible";
     const syncTerms = () => {
-      termsMore.classList.toggle("gone", termsList.scrollTop + termsList.clientHeight >= termsList.scrollHeight - 30);
-      let activeId = secs[0]?.id;
-      for (const s of secs) {
-        if (s.offsetTop - termsList.offsetTop <= termsList.scrollTop + 60) activeId = s.id;
+      if (isInnerScroll()) {
+        termsMore.classList.toggle("gone", termsList.scrollTop + termsList.clientHeight >= termsList.scrollHeight - 30);
+        let activeId = secs[0]?.id;
+        for (const s of secs) {
+          if (s.offsetTop - termsList.offsetTop <= termsList.scrollTop + 60) activeId = s.id;
+        }
+        btns.forEach(b => b.classList.toggle("on", b.dataset.jump === activeId));
+      } else {
+        let activeId = secs[0]?.id;
+        for (const s of secs) {
+          if (s.getBoundingClientRect().top <= 140) activeId = s.id;
+        }
+        btns.forEach(b => b.classList.toggle("on", b.dataset.jump === activeId));
       }
-      btns.forEach(b => b.classList.toggle("on", b.dataset.jump === activeId));
     };
     termsChips.addEventListener("click", e => {
       const b = e.target.closest("button[data-jump]");
       if (!b) return;
       const target = document.getElementById(b.dataset.jump);
-      if (target) termsList.scrollTo({ top: target.offsetTop - termsList.offsetTop - 8, behavior: reduce ? "auto" : "smooth" });
+      if (target) {
+        if (isInnerScroll()) {
+          termsList.scrollTo({ top: target.offsetTop - termsList.offsetTop - 8, behavior: reduce ? "auto" : "smooth" });
+        } else {
+          const y = target.getBoundingClientRect().top + scrollY - 84;
+          scrollTo({ top: y, behavior: reduce ? "auto" : "smooth" });
+        }
+      }
       btns.forEach(x => x.classList.toggle("on", x === b));
       termsChips.scrollTo({ left: b.offsetLeft - termsChips.clientWidth / 2 + b.offsetWidth / 2, behavior: reduce ? "auto" : "smooth" });
     });
     termsList.addEventListener("scroll", syncTerms, { passive: true });
+    addEventListener("scroll", syncTerms, { passive: true });
     termsMore.addEventListener("click", () => termsList.scrollBy({ top: termsList.clientHeight * .7, behavior: reduce ? "auto" : "smooth" }));
     requestAnimationFrame(syncTerms);
   }
